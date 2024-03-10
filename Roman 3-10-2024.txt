@@ -1,0 +1,107 @@
+Github
+
+administrator
+C1sc0123
+
+Task1: GIT vs github:
+
+Login:
+RomanUson
+mw
+
+assignment:
+Team rivan YT page
+Cisco CCNA 200-301 step by step
+
+meraki dashboard
+rivancybersec1@outlook.com
+
+First 5
+Protect console
+Protect telnet
+
+Vlan1                  10.62.1.4       
+Vlan10                 10.62.10.4     
+Vlan50                 10.62.50.4   
+Vlan100                10.62.100.4  
+
+
+Task2:
+
+3 modes:
+user 
+priv
+global
+
+task3: how to use git
+
+
+stop logs: No logging console
+
+---
+
+1 POE - power over internet
+2 SVI - SW vlan int
+3 DHCP Server
+4 Vlan creation, Vlan Management
+
+Phone app:
+fing
+wifi analyzer
+grandstream wave
+---
+CUCM - Cisco unified call manager
+1 KTM - Key telephone system
+2 IP Phones
+3 SIP Phones
+4 Video conferencing
+
+analog 
+sip 
+incomming/outgoing
+
+
+ncpa.cpl
+
+VLAN 10 - WIFI
+VLAN 50 - IP CAM
+VLAN 100 - VOICE
+
+netstat -rn = displays routing table
+
+Edge router = For site to site connectivity
+1 static routing
+2 ospf
+3 EIGRP
+4 BGP
+5 VPN
+6 MBGP
+
+
+SH ip int brief =  to show if there is IP
+
+SH cdp neighbors = to show other devices
+
+2 rules of routing:
+1. ping dikit
+2. route not dikit
+
+Task 4:
+Betteran move
+
+TASKS DNS:
+
+TASK 6:
+how to retain all info by next sunday
+rule1: buddy system
+rule2: sched
+m: install vmware17, secureCRT8 and RSThayup.7z
+t: dhcp home lab
+w: subnetting home lab
+th: 
+
+
+
+
+
+
