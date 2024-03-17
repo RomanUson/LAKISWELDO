@@ -1,0 +1,129 @@
+config t
+vlan 25
+ name teluscebu.com
+ exit
+Int vlan 25
+ no shut
+ ip add 10.0.4.1 255.255.252.0
+ip dhcp excluded-add 10.0.4.1 10.0.4.100
+ip dhcp pool teluscebu.com
+ network 10.0.4.0 255.255.252.0
+ default-router 10.0.4.1
+ domain-name teluscebu.com
+ dns-server 10.62.1.10
+ option 150 ip 10.62.100.8
+ Int Fa 0/7
+  swi acc vlan 25
+  do sh ip dhcp binding
+
+etelecare 8500
+use 10.0.0.0/8
+C
+S
+I
+
+
+config t
+vlan 25
+ name etelecare.com
+ exit
+Int vlan 1
+ no shut
+ ip add 10.0.64.1 255.255.192.0
+ip dhcp excluded-add 10.0.64.1 10.0.64.100
+ip dhcp pool etelecare.com
+ network 10.0.64.1 255.255.192.0
+ default-router 10.0.64.1
+ domain-name etelecare.com
+ dns-server 10.62.1.10
+option 150 ip 10.62.100.8
+------------------------------------
+ Int e0/0
+  swi acc vlan 10
+  do sh ip dhcp binding
+
+config t
+vlan 10
+ name PHP.GOV.PH
+ exit
+Int vlan 10
+ no shut
+ ip add 10.0.1.1 255.255.255.0
+ip dhcp excluded-add 10.0.1.1 10.0.1.100
+ip dhcp pool PHP.GOV.PH
+ network 10.0.1.0 255.255.255.0
+ default-router 10.0.1.1
+ domain-name PHP.GOV.PH
+ dns-server 10.12.1.10
+
+
+ Int e0/0
+  swi acc vlan 10
+  do sh ip dhcp binding
+---
+----------------------------
+Day2
+
+sh ip int brief = show IP
+sh ip dhcp binding 
+sh vlan brief
+sh cdp neighbors = show other devices
+sh power inline = sh POE cameras
+
+Task2: Interview question/Exam CCNA
+1. Public IP vs private IP
+
+how to check if there is internet/PRO:
+netstat -rn
+
+Windows Secret technique:
+cmd
+route delete 0.0.0.0
+PuntaSaInternet:
+route add 0.0.0.0 mask 0.0.0.0 10.3.3.1
+ping 8.8.8.8
+PuntaCisco:
+route add 10.0.0.0 mask 255.0.0.0 10.62.1.4
+route add 200.0.0.0 mask 255.255.255.0 10.62.1.4
+
+What is PUBLIC IP:
+Internet routable. Country assigned IP address.
+
+What is PRIVATE IP:
+10.0.0.0/8
+172.16.-172.31
+192.168.0.0
+
+Task 3: Ultimate Net Engineer technique
+Finger method
+
+Task5:
+IPV4 design your networks
+Design and implement a callcenter for sykesasia.com
+
+Ex 5:
+Design/Implement PNP.GOV.PH callcenter with only 220 
+10.0.0.0/8
+
+Task6:
+
+2 rules of routing:
+1.Ping dikit
+2.route not dikit
+
+Factory reset routing:
+conf t
+no ip routing
+ip routing
+end
+
+Assignment Day2:
+1. Sagutin 3 pages M-W-F
+2. youtube StaticLab: ulit
+3. Eigrp, OSPF
+4. 32/64gb usb
+
+
+
+
+
