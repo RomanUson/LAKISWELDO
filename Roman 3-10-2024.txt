@@ -99,6 +99,193 @@ m: install vmware17, secureCRT8 and RSThayup.7z
 t: dhcp home lab
 w: subnetting home lab
 th: 
+----
+9:32 AM 3/24/2024
+Task1: Import github CCNA file
+
+Task2: Tshooting
+
+How to static route Linux:
+sudo su
+ifconfig eth0 192.168.108.69 netmask 255.255.255.0 up
+route add default gw 192.168.108.2
+ping 8.8.8.8
+netstat -rm
+
+static routing = S*
+
+Routing protocol:
+EIGRP = Cisco devices
+OSPF = Multi device / brand connection
+EBGP = Router with same AS
+IBGP = Router not in same AS
+
+Access SW:
+Sh vlan brief
+
+How to check if working/command:
+EIGRP:
+1. sh ip eigrp
+2.    neighbor
+3.    topology
+4.    traffic
+
+OSFP:
+1.sh ip OSPF
+2.    neighbor
+3.    database
+4.    interface
+
+BGP:
+1. Sh bgp summary
+
+How to factoryReset routing:
+conf t
+no ip routing
+ip routing
+end
+
+How to check connected/wired devices: 
+Sh ip route connected | INC C
+P1:
+Task1: Create a static route for P1 going to VLAN 200
+Conf t
+ip route 192.168.1.128 255.255.255.224 10.2.1.1 1
+ip route 192.168.1.128 255.255.255.224 10.2.1.2 20
+
+!Longest Prefix-rule:
+conf t
+ip route 192.168.1.130 255.255.255.255 10.2.1.2
+
+Default route for P1/P2:
+
+EIGRP:
+
+ITIL-ITSM:
+192.168.252.131
+
+ABR - Area boarder router
+
+OSPF - MAX 50 routers
+
+Command:
+Sh history = Last command typed
+
+On exam/Meaning LSA: Link State Area advertisement  
+O = LSA type1
+OIA = LSA type2
+
+BGP protocol
+@R1:
+conf t
+router bgp 1
+bgp router-id 1
+neighbor 209.9.9.3 remote-as 3
+neighbor 207.7.7.2 remote-as 2
+neighbor 208.8.8.4 remote-as 45
+network 209.9.9.0 mask 255.255.255.0
+network 208.8.8.0 mask 255.255.255.0
+network 207.7.7.0 mask 255.255.255.0
+address-family ipv4
+neighbor 209.9.9.3 activate
+neighbor 207.7.7.2 activate
+neighbor 208.8.8.4 activate
+exit
+
+@OSPF
+SW
+conf t
+ip routing
+no router ospf 1
+router ospf 1
+network 10.0.0.0 0.255.255.255 area 0
+
+@CUCM
+conf t
+ip routing
+no router ospf 1
+router ospf 1
+network 10.0.0.0 0.255.255.255 area 0
+
+@edge
+conf t
+ip routing
+no router ospf 1
+router ospf 1
+network 200.0.0.0 0.0.0.255 area 0 
+network 10.0.0.0 0.255.255.255 area 0
+
+VPN 3 requirement setup:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
